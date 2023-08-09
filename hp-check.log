@@ -1,0 +1,133 @@
+hp-check[22183]: info: :
+hp-check[22183]: info: :[01mHP Linux Imaging and Printing System (ver. 3.22.10)[0m
+hp-check[22183]: info: :[01mDependency/Version Check Utility ver. 15.1[0m
+hp-check[22183]: info: :
+hp-check[22183]: info: :Copyright (c) 2001-18 HP Development Company, LP
+hp-check[22183]: info: :This software comes with ABSOLUTELY NO WARRANTY.
+hp-check[22183]: info: :This is free software, and you are welcome to distribute it
+hp-check[22183]: info: :under certain conditions. See COPYING file for more details.
+hp-check[22183]: info: :
+hp-check[22183]: info: :[01mNote: hp-check can be run in three modes:[0m
+hp-check[22183]: info: :1. Compile-time check mode (-c or --compile): Use this mode before compiling the HPLIP supplied tarball (.tar.gz or .run) to determine if the proper           
+hp-check[22183]: info: :dependencies are installed to successfully compile HPLIP.                                                                                                      
+hp-check[22183]: info: :2. Run-time check mode (-r or --run): Use this mode to determine if a distro supplied package (.deb, .rpm, etc) or an already built HPLIP supplied tarball has 
+hp-check[22183]: info: :the proper dependencies installed to successfully run.                                                                                                         
+hp-check[22183]: info: :3. Both compile- and run-time check mode (-b or --both) (Default): This mode will check both of the above cases (both compile- and run-time dependencies).     
+hp-check[22183]: info: :
+hp-check[22183]: info: :Check types:                                                                                                                                                   
+hp-check[22183]: info: :a. EXTERNALDEP - External Dependencies                                                                                                                         
+hp-check[22183]: info: :b. GENERALDEP - General Dependencies (required both at compile and run time)                                                                                   
+hp-check[22183]: info: :c. COMPILEDEP - Compile time Dependencies                                                                                                                      
+hp-check[22183]: info: :d. [All are run-time checks]                                                                                                                                   
+hp-check[22183]: info: :PYEXT SCANCONF QUEUES PERMISSION                                                                                                                               
+hp-check[22183]: info: :
+hp-check[22183]: info: :Status Types:
+hp-check[22183]: info: :    OK
+hp-check[22183]: info: :    MISSING       - Missing Dependency or Permission or Plug-in
+hp-check[22183]: info: :    INCOMPAT      - Incompatible dependency-version or Plugin-version
+hp-check[22183]: info: :
+warning: [01mubuntu-23.04 version is not supported. Using ubuntu-22.04 versions dependencies to verify and install...[0m
+hp-check[22183]: info: :
+hp-check[22183]: info: :---------------
+hp-check[22183]: info: :| SYSTEM INFO |
+hp-check[22183]: info: :---------------
+hp-check[22183]: info: :
+hp-check[22183]: info: : Kernel: 6.2.0-26-generic #26-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul 10 23:39:54 UTC 2023 GNU/Linux
+ Host: me-MXG071
+ Proc: 6.2.0-26-generic #26-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul 10 23:39:54 UTC 2023 GNU/Linux
+ Distribution: ubuntu 23.04
+hp-check[22183]: info: : Bitness: 64 bit
+
+hp-check[22183]: info: :
+hp-check[22183]: info: :-----------------------
+hp-check[22183]: info: :| HPLIP CONFIGURATION |
+hp-check[22183]: info: :-----------------------
+hp-check[22183]: info: :
+hp-check[22183]: info: :HPLIP-Version: HPLIP 3.22.10
+hp-check[22183]: info: :HPLIP-Home: /usr/share/hplip
+warning: HPLIP-Installation: Auto installation is not supported for ubuntu distro  23.04 version 
+hp-check[22183]: info: :
+hp-check[22183]: info: :[01mCurrent contents of '/etc/hp/hplip.conf' file:[0m
+hp-check[22183]: info: :# hplip.conf.  Generated from hplip.conf.in by configure.
+
+[hplip]
+version=3.22.10
+
+[dirs]
+home=/usr/share/hplip
+run=/var/run
+ppd=/usr/share/ppd/hplip/HP
+ppdbase=/usr/share/ppd/hplip
+doc=/usr/share/doc/hplip
+html=/usr/share/doc/hplip-doc
+icon=no
+cupsbackend=/usr/lib/cups/backend
+cupsfilter=/usr/lib/cups/filter
+drv=/usr/share/cups/drv
+bin=/usr/bin
+apparmor=/etc/apparmor.d
+# Following values are determined at configure time and cannot be changed.
+[configure]
+network-build=yes
+libusb01-build=no
+pp-build=no
+gui-build=yes
+scanner-build=yes
+fax-build=yes
+dbus-build=yes
+cups11-build=no
+doc-build=yes
+shadow-build=no
+hpijs-install=yes
+foomatic-drv-install=yes
+foomatic-ppd-install=no
+foomatic-rip-hplip-install=no
+hpcups-install=yes
+cups-drv-install=yes
+cups-ppd-install=no
+internal-tag=3.22.10
+restricted-build=no
+ui-toolkit=qt5
+qt3=no
+qt4=no
+qt5=yes
+policy-kit=yes
+lite-build=no
+udev_sysfs_rules=no
+hpcups-only-build=no
+hpijs-only-build=no
+apparmor_build=no
+class-driver=no
+
+hp-check[22183]: info: :
+hp-check[22183]: info: :[01mCurrent contents of '/var/lib/hp/hplip.state' file:[0m
+hp-check[22183]: info: :Plugins are not installed. Could not access file: No such file or directory
+hp-check[22183]: info: :
+hp-check[22183]: info: :[01mCurrent contents of '~/.hplip/hplip.conf' file:[0m
+hp-check[22183]: info: :[installation]
+date_time = 08/07/23 12:41:21
+version = 3.22.10
+
+
+hp-check[22183]: info: : <Package-name>        <Package-Desc>      <Required/Optional> <Min-Version> <Installed-Version> <Status>   <Comment>
+hp-check[22183]: info: :
+hp-check[22183]: info: :-------------------------
+hp-check[22183]: info: :| External Dependencies |
+hp-check[22183]: info: :-------------------------
+hp-check[22183]: info: :
+hp-check[22183]: info: :[31;01m error: cups          CUPS - Common Unix Printing System                           REQUIRED        1.1             -               INCOMPAT   'CUPS may not be installed or not running'[0m
+hp-check[22183]: info: : gs                   GhostScript - PostScript and PDF language interpreter and previewer REQUIRED        7.05            10.00.0         OK         -
+hp-check[22183]: info: :[31;01m error: xsane         xsane - Graphical scanner frontend for SANE                  OPTIONAL        0.9             -               MISSING    'xsane needs to be installed'[0m
+hp-check[22183]: info: : scanimage            scanimage - Shell scanning program                           OPTIONAL        1.0             1.1.1           OK         -
+hp-check[22183]: info: :[31;01m error: dbus          DBus - Message bus system                                    REQUIRED        -               1.14.4          MISSING    'DBUS may not be installed or not running'[0m
+hp-check[22183]: info: : policykit            PolicyKit - Administrative policy framework                  OPTIONAL        -               0.105           OK         -
+hp-check[22183]: info: : network              network -wget                                                OPTIONAL        -               1.21.3          OK         -
+hp-check[22183]: info: : avahi-utils          avahi-utils                                                  OPTIONAL        -               0.8             OK         -
+hp-check[22183]: info: :
+hp-check[22183]: info: :------------------------
+hp-check[22183]: info: :| General Dependencies |
+hp-check[22183]: info: :------------------------
+hp-check[22183]: info: :
+hp-check[22183]: info: :[31;01m error: libjpeg       libjpeg - JPEG library                                       REQUIRED        -               -               MISSING    'libjpeg needs to be installed'[0m
+hp-check[22183]: info: :[31;01m error: cups-devel    CUPS devel- Common Unix Printing System development files    REQUIRED        -               -               MISSING    'cups-devel needs to be installed'[0m
+hp-check[22183]: info: :[31;01m error: cups-image    CUPS image - CUPS image development files                    REQUIRED        -               -               MISSING    'cups-image needs to be installed'[0m
